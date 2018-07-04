@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_offer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OFFERS"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:textSize="@dimen/text_regular_3x"
+        android:textStyle="bold"
+        android:textColor="@color/secondary_text"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_offer_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginRight="@dimen/margin_medium_2"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/dummy_offer"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/margin_medium_2"
+                        android:paddingTop="@dimen/margin_medium_2"
+                        android:paddingBottom="@dimen/margin_medium"
+                        android:paddingRight="@dimen/margin_medium">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Casa Pop"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:textSize="@dimen/text_regular_3x"
+                            android:textStyle="bold"
+                            android:textColor="@color/primary_text"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cafe, Italian, Chinese"
+                            android:textSize="@dimen/text_regular"
+                            android:textStyle="bold"
+                            android:textColor="@color/secondary_text"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cost $300 for more"
+                            android:textSize="@dimen/text_regular"
+                            android:textStyle="bold"
+                            android:textColor="@color/secondary_text"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_medium_2">
+
+                            <RatingBar
+                                android:id="@+id/ratingBar2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:rating="4.2"
+                                android:isIndicator="true"
+                                android:focusable="true"
+                                android:clickable="true"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="View Details"
+                                android:textSize="@dimen/text_regular"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary"
+                                android:layout_gravity="right"
+                                android:gravity="right"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="@dimen/margin_xlarge"
+            android:layout_height="@dimen/margin_xlarge"
+            android:text="4.6"
+            android:background="@drawable/shape_border_primary_round"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:textSize="@dimen/text_regular"
+            android:textStyle="bold"
+            android:textColor="@color/whitefull"
+            />
+
+    </FrameLayout>
+
+</LinearLayout>
