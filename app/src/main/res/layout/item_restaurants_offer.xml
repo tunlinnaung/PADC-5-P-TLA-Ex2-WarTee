@@ -97,9 +97,6 @@
                                 android:isIndicator="true"
                                 android:focusable="true"
                                 android:clickable="true"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
                                 />
 
                             <TextView
@@ -127,7 +124,7 @@
             android:layout_width="@dimen/margin_xlarge"
             android:layout_height="@dimen/margin_xlarge"
             android:text="4.6"
-            android:background="@drawable/shape_border_primary_round"
+            android:background="@drawable/shape_border_white_primary_round"
             android:layout_gravity="right"
             android:gravity="center"
             android:textSize="@dimen/text_regular"

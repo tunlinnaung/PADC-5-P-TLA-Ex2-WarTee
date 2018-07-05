@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WarTee</string>
+    <string name="et_hint">Add a note (extra sauce, no salad., etc)</string>
 </resources>

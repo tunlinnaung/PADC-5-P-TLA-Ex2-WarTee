@@ -15,8 +15,8 @@
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="256dp"
-            android:background="@color/blackfull"
+            android:layout_height="220dp"
+            android:background="@color/whitefull"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="@color/whitefull">
 
@@ -67,7 +67,8 @@
         android:layout_height="@dimen/margin_xxlarge"
         android:orientation="horizontal"
         app:layout_anchor="@id/app_bar"
-        app:layout_anchorGravity="bottom|center">
+        app:layout_anchorGravity="bottom|center"
+        android:animateLayoutChanges="true">
 
         <FrameLayout
             android:id="@+id/ll_location"
