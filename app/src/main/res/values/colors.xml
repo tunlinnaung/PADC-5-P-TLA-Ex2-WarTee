@@ -10,9 +10,8 @@
     <color name="icons">#212121</color>
     <color name="divider">#BDBDBD</color>
 
-    <color name="blackfull">#000000</color>
-    <color name="whitefull">#FFFFFF</color>
+    <color name="black_full">#000000</color>
+    <color name="white_full">#FFFFFF</color>
     <color name="gray">#757575</color>
-
 
 </resources>

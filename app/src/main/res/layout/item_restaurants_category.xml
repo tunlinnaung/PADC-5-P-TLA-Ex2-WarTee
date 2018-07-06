@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_food_details"
     android:layout_width="90dp"
     android:layout_height="80dp"
     android:orientation="vertical"
@@ -16,7 +17,7 @@
         android:id="@+id/tv_category_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Beers Bars"
+        android:text="Beers"
         android:layout_marginTop="@dimen/margin_medium"
         android:textSize="@dimen/text_regular"
         android:textStyle="normal"

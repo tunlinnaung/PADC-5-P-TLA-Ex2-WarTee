@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_offer_details"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
@@ -10,8 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OFFERS"
-        android:layout_marginBottom="@dimen/margin_medium_2"
-        android:textSize="@dimen/text_regular_3x"
+        android:layout_marginBottom="@dimen/margin_medium_3"
+        android:textSize="@dimen/text_regular_2x"
         android:textStyle="bold"
         android:textColor="@color/secondary_text"
         />
@@ -28,7 +29,7 @@
                 android:id="@+id/cv_offer_item"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2"
                 android:layout_marginRight="@dimen/margin_medium_2"
                 app:cardElevation="4dp">
 
@@ -85,8 +86,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/margin_medium_2">
+                            android:layout_height="match_parent">
 
                             <RatingBar
                                 android:id="@+id/ratingBar2"
@@ -97,17 +97,18 @@
                                 android:isIndicator="true"
                                 android:focusable="true"
                                 android:clickable="true"
+                                android:layout_gravity="bottom|left"
                                 />
 
                             <TextView
+                                android:id="@+id/tv_offer_details"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="View Details"
-                                android:textSize="@dimen/text_regular"
+                                android:textSize="@dimen/text_small"
                                 android:textStyle="bold"
                                 android:textColor="@color/primary"
-                                android:layout_gravity="right"
-                                android:gravity="right"
+                                android:gravity="bottom|right"
                                 />
 
                         </LinearLayout>
@@ -129,7 +130,7 @@
             android:gravity="center"
             android:textSize="@dimen/text_regular"
             android:textStyle="bold"
-            android:textColor="@color/whitefull"
+            android:textColor="@color/white_full"
             />
 
     </FrameLayout>

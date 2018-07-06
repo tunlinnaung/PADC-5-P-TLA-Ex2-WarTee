@@ -1,4 +1,4 @@
-package wartee.tunlinaung.wartee;
+package wartee.tunlinaung.xyz;
 
 import org.junit.Test;
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RestaurantsActivity"
+    tools:context=".activities.RestaurantsActivity"
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
@@ -15,10 +15,10 @@
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:background="@color/whitefull"
+            android:layout_height="240dp"
+            android:background="@color/white_full"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="@color/whitefull">
+            app:contentScrim="@color/white_full">
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/vp_restaurants_details"
@@ -44,25 +44,32 @@
             android:layout_marginRight="@dimen/margin_medium_2"
             android:orientation="vertical">
 
-            <android.support.v7.widget.RecyclerView
+            <wartee.tunlinaung.xyz.components.SmartRecyclerView
                 android:id="@+id/rv_restaurants_categories"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/margin_xxlarge"
+                android:layout_height="80dp"
                 android:layout_marginTop="@dimen/margin_xxxlarge"
                 />
 
-            <android.support.v7.widget.RecyclerView
+            <wartee.tunlinaung.xyz.components.SmartRecyclerView
                 android:id="@+id/rv_restaurants_offers"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:layout_marginTop="@dimen/margin_xlarge"
                 />
+
+            <include
+                android:id="@+id/vp_empty_view_pod"
+                layout="@layout/view_pod_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
     <LinearLayout
+        android:id="@+id/ll_search_restaurant"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/margin_xxlarge"
         android:orientation="horizontal"
@@ -83,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:padding="@dimen/margin_medium"
+                android:padding="@dimen/padding_locaion_icon"
                 android:adjustViewBounds="true"
                 android:src="@drawable/ic_location"
                 />

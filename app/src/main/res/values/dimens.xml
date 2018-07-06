@@ -34,4 +34,7 @@
     <dimen name="text_big_2x">60sp</dimen>
     <dimen name="text_big_3x">80sp</dimen>
 
+    <!-- Custom dimension -->
+    <dimen name="padding_locaion_icon">12dp</dimen>
+
 </resources>
