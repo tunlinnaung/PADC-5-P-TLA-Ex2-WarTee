@@ -1,32 +1,49 @@
 package wartee.tunlinaung.xyz.data.vo;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+import android.arch.persistence.room.TypeConverters;
+import android.support.annotation.NonNull;
+
+import java.util.ArrayList;
 import java.util.List;
 
+import wartee.tunlinaung.xyz.persistance.typeconverters.FoodsImagesTypeConvertor;
+
+@Entity(tableName = "food")
+@TypeConverters(FoodsImagesTypeConvertor.class)
 public class FoodVO {
 
-
-    /**
-     * warDeeId : WD001
-     * name : လက်ဖက်ရည်
-     * images : ["http://cdn2.stylecraze.com/wp-content/uploads/2015/04/marjuana-tea.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT09AVRbvAxAJzZND2A19o4RQ5D3V3tpp-4KvsersqlpfscF1cLWA","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLmxpvxHxUiTPOGLq0qlFmukD3lE4xa2ziWnLKcwsK6WKGhRiM"]
-     * generalTaste : [{"tasteId":"T001","taste":"ပုံမှန် ကျဆိမ့် ချိုဆိမ့်","tasteDesc":"မနက်စာအဖြစ် သောက်လေ့ရှိသောအရည်တမျိုး  အီကြာကွေးနှင့် တွဲစားခြင်းသည် အလိုက်ဖက်ဆုံးဖြစ်သည်"}]
-     * suitedFor : [{"suitedForId":"SF001","suitedFor":"အဆာပြေသောက်ရန်သင့်တော်","suitedForDesc":"abc"}]
-     * priceRangeMin : 2000
-     * priceRangeMax : 3000
-     * matchWarDeeList : [{"warDeeId":"WD002"},{"warDeeId":"WD003"},{"warDeeId":"WD004"}]
-     * shopByDistance : [{"shopByDistanceId":"SBD001","mealShop":{"mealShopId":"MS016"},"distanceInFeet":123.45},{"shopByDistanceId":"SBD002","mealShop":{"mealShopId":"MS010"},"distanceInFeet":234.56}]
-     * shopByPopularity : [{"shopByPopularityId":"SBP001","mealShop":{"mealShopId":"MS015"}},{"shopByPopularityId":"SBP002","mealShop":{"mealShopId":"MS016"}}]
-     */
-
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "war_dee_id")
     private String warDeeId;
+
     private String name;
+
+    @ColumnInfo(name = "price_range_min")
     private int priceRangeMin;
+
+    @ColumnInfo(name = "price_range_max")
     private int priceRangeMax;
+
     private List<String> images;
+
+    @Ignore
     private List<GeneralTasteVO> generalTaste;
+
+    @Ignore
     private List<SuitedForVO> suitedFor;
+
+    @Ignore
     private List<MatchWarDeeListVO> matchWarDeeList;
+
+    @Ignore
     private List<ShopByDistanceVO> shopByDistance;
+
+    @Ignore
     private List<ShopByPopularityVO> shopByPopularity;
 
     public String getWarDeeId() {
@@ -62,6 +79,9 @@ public class FoodVO {
     }
 
     public List<String> getImages() {
+        if (images == null) {
+            images = new ArrayList<>();
+        }
         return images;
     }
 
@@ -70,6 +90,9 @@ public class FoodVO {
     }
 
     public List<GeneralTasteVO> getGeneralTaste() {
+        if (generalTaste == null) {
+            generalTaste = new ArrayList<>();
+        }
         return generalTaste;
     }
 
@@ -78,6 +101,9 @@ public class FoodVO {
     }
 
     public List<SuitedForVO> getSuitedFor() {
+        if (suitedFor == null) {
+            suitedFor = new ArrayList<>();
+        }
         return suitedFor;
     }
 
@@ -86,6 +112,9 @@ public class FoodVO {
     }
 
     public List<MatchWarDeeListVO> getMatchWarDeeList() {
+        if (matchWarDeeList == null) {
+            matchWarDeeList = new ArrayList<>();
+        }
         return matchWarDeeList;
     }
 
@@ -94,6 +123,9 @@ public class FoodVO {
     }
 
     public List<ShopByDistanceVO> getShopByDistance() {
+        if (shopByDistance == null) {
+            shopByDistance = new ArrayList<>();
+        }
         return shopByDistance;
     }
 
@@ -102,6 +134,9 @@ public class FoodVO {
     }
 
     public List<ShopByPopularityVO> getShopByPopularity() {
+        if (shopByPopularity == null) {
+            shopByPopularity = new ArrayList<>();
+        }
         return shopByPopularity;
     }
 

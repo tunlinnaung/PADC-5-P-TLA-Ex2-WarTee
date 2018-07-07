@@ -11,11 +11,12 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import wartee.tunlinaung.xyz.network.WarTeeApi;
+import wartee.tunlinaung.xyz.persistance.WarTeeDB;
 
 public abstract class BaseModel {
 
     protected WarTeeApi mTheApi;
-    //protected MMNewsDB mTheDB;
+    protected WarTeeDB mTheDB;
 
     protected BaseModel(Context context) {
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -32,7 +33,7 @@ public abstract class BaseModel {
                 .build();
 
         mTheApi = retrofit.create(WarTeeApi.class);
-        //mTheDB = MMNewsDB.getDatabase(context);
+        mTheDB = WarTeeDB.getDatabase(context);
     }
 
 }

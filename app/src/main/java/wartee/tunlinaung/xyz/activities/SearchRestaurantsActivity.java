@@ -12,7 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import wartee.tunlinaung.xyz.R;
 
-public class SearchRestaurantsActivity extends AppCompatActivity {
+public class SearchRestaurantsActivity extends BaseActivity {
 
     @BindView(R.id.floating_search_view)
     FloatingSearchView mSearchView;

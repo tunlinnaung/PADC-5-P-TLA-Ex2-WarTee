@@ -1,6 +1,12 @@
 package wartee.tunlinaung.xyz.data.vo;
 
-class ReviewsVO {
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
+@Entity(tableName = "review")
+public class ReviewsVO {
     /**
      * reviewId : RV001
      * review : အရမြးကောငြးတယြ
@@ -10,12 +16,21 @@ class ReviewsVO {
      * timestamp : 20:00
      */
 
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "review_id")
     private String reviewId;
     private String review;
+    @ColumnInfo(name = "user_id")
     private String userId;
+    @ColumnInfo(name = "user_name")
     private String userName;
+    @ColumnInfo(name = "user_image")
     private String userImage;
+    @ColumnInfo(name = "time_stamp")
     private String timestamp;
+    @ColumnInfo(name = "restaurant_id")
+    private transient String restaurantId;
 
     public String getReviewId() {
         return reviewId;
@@ -63,5 +78,13 @@ class ReviewsVO {
 
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public String getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(String restaurantId) {
+        this.restaurantId = restaurantId;
     }
 }

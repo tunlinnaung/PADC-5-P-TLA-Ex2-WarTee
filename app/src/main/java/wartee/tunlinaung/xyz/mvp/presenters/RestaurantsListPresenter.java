@@ -23,7 +23,7 @@ public class RestaurantsListPresenter extends BasePresenter<RestaurantListView>
         mRestaurantListLD = new MutableLiveData<>();
         mFoodListLD = new MutableLiveData<>();
 
-        WarTeeModel.newInstance().startLoadingDatas(mRestaurantListLD, mFoodListLD, mErrorLD);
+        WarTeeModel.getInstance().startLoadingDatas(mRestaurantListLD, mFoodListLD, mErrorLD);
     }
 
     public MutableLiveData<List<RestaurantVO>> getmRestaurantListLD() {

@@ -1,7 +1,18 @@
 package wartee.tunlinaung.xyz.data.vo;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+import android.arch.persistence.room.TypeConverters;
+import android.support.annotation.NonNull;
+
 import java.util.List;
 
+import wartee.tunlinaung.xyz.persistance.typeconverters.RestaurantsImagesTypeConvertor;
+
+@Entity(tableName = "restaurant")
+@TypeConverters(RestaurantsImagesTypeConvertor.class)
 public class RestaurantVO {
 
 
@@ -17,6 +28,9 @@ public class RestaurantVO {
      * reviews : [{"reviewId":"RV001","review":"အရမြးကောငြးတယြ","userId":"US001","userName":"မောငမြောငြ","userImage":"https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png","timestamp":"20:00"},{"reviewId":"bcd","review":"abc","userId":"abc","userName":"abc","userImage":"abc","timestamp":"abc"}]
      */
 
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "shop_id")
     private String shopId;
     private String name;
     private String address;
@@ -24,7 +38,11 @@ public class RestaurantVO {
     private double lng;
     private String township;
     private double popularity;
+
+    @ColumnInfo(name = "shop_images")
     private List<String> shopImages;
+
+    @Ignore
     private List<ReviewsVO> reviews;
 
     public String getShopId() {

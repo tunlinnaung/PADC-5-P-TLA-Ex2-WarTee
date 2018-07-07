@@ -1,10 +1,16 @@
 package wartee.tunlinaung.xyz.data.vo;
 
-class MealShopVO {
-    /**
-     * mealShopId : MS016
-     */
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
+@Entity(tableName = "meal_shop")
+public class MealShopVO {
+
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "meal_shop_id")
     private String mealShopId;
 
     public String getMealShopId() {

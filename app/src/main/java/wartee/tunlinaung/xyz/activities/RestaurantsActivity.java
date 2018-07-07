@@ -31,7 +31,7 @@ import wartee.tunlinaung.xyz.mvp.presenters.RestaurantsListPresenter;
 import wartee.tunlinaung.xyz.mvp.views.RestaurantListView;
 import wartee.tunlinaung.xyz.utils.AppConstants;
 
-public class RestaurantsActivity extends AppCompatActivity implements RestaurantListView {
+public class RestaurantsActivity extends BaseActivity implements RestaurantListView {
 
     @BindView(R.id.vp_restaurants_details)
     ViewPager viewPager;
